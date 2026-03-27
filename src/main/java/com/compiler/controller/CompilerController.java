@@ -5,7 +5,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/compiler")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = {
+    "http://localhost:4200",
+    "https://mini-compiler-front.vercel.app"
+})
 public class CompilerController {
 
     private final CompilerService compilerService;
